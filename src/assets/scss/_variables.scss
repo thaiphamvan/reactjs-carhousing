@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+	Variables
+\* ------------------------------------------------------------ */
+
+$font-family-sans-serif 		: Arial, Helvetica, sans-serif;
+$font-family-serif 				: Times, 'Times New Roman', serif;
+$font-averta 					: 'Averta', sans-serif;
+$font-averta-demo 				: 'Averta Demo', sans-serif;
+$font-avenir 					: 'Avenir Next Condensed', sans-serif;
+$font-sf-pro 					: 'SF Pro Text', sans-serif;
+$font-national 					: 'National', sans-serif;
+
+$white 							: #fff;
+$black 							: #000;
+$dark-gray 						: #313840;
+$light-gray 					: #939eaa;
+$green 							: #24cf5f;
+$blue 							: #4baff0;
+$red 							: #ff2c2c;
+
+$font-size-base 				: 16px;
+$line-height-base 				: 1.25;
+
+$shell-max-width 				: 1156px;
+$shell-gutter 					: 24px;
+
+$responsive-xxs 				: 374px;
+$responsive-xs 					: 767px;
+$responsive-sm 					: 1023px;
+$responsive-md 					: 1279px;
+$responsive-lg 					: 1439px;
+
+$mobile-small 					: '(max-width: #{$responsive-xxs}) ';
+$mobile 						: '(max-width: #{$responsive-xs}) ';
+$tablet 						: '(max-width: #{$responsive-sm}) ';
+$small-desktop 					: '(max-width: #{$responsive-md}) ';
+$medium-desktop 				: '(max-width: #{$responsive-lg}) ';
+$retina 						: '(min-resolution: 2dppx) ';
+
+// Usage
+// @media #{$small-desktop}

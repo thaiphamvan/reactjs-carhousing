@@ -1,0 +1,27 @@
+h4.homeTitle {
+  &-des {
+    font-family: $font-family-sans-serif;
+    color: #646b72;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100%);
+    font-size: 17px;
+    font-weight: 100;
+    @media #{$tablet} {
+      font-size: 10px;
+    }
+  }
+  color: #ff8700;
+  @media #{$mobile} {
+    display: block;
+    font-family: $font-averta-demo;
+    color: #ff4578;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    margin: 0;
+    font-size: 22px;
+    line-height: 1;
+    margin-right: 5px;
+  }
+}
