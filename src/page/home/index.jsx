@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './home.scss';
 
 class Home extends Component {
+  changeScreen = () => {
+
+  }
   render() {
     return (
       <div className="App">
-       <h4 className="homeTitle">Learen</h4>
+        <Link to='/blog'>Blog</Link>
       </div>
     );
   }
