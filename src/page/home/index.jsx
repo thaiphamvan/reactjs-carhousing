@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './home.scss';
+import { Header } from '../../component';
 
 class Home extends Component {
   changeScreen = () => {
@@ -9,6 +10,7 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Link to='/blog'>Blog</Link>
       </div>
     );

@@ -1,0 +1,186 @@
+/* ------------------------------------------------------------ *\
+	Nav Primary
+\* ------------------------------------------------------------ */
+
+.nav--primary {
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    & ~ li {
+      margin-left: 50px;
+    }
+
+    &.active {
+      .icon {
+        opacity: 1;
+      }
+
+      a {
+        color: $dark-gray;
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: $green;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 0;
+        }
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: 26px 0 25px;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 100%;
+    line-height: 1.33;
+    color: inherit;
+    transition: color 0.25s;
+    &::after {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -6px;
+      content: "\f107";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      color: inherit;
+      -webkit-font-smoothing: antialiased;
+    }
+    &:hover {
+      color: $dark-gray;
+
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .badge {
+    position: relative;
+    top: -10px;
+  }
+
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+  }
+
+  /*  Tablet  */
+  @media #{$tablet} {
+    li {
+      & ~ li {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Access
+\* ------------------------------------------------------------ */
+
+.nav--access {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    font-family: $font-avenir;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.33;
+    color: $dark-gray;
+    text-decoration: none;
+
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+      margin-right: 9px;
+    }
+  }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Footer
+\* ------------------------------------------------------------ */
+
+.nav--footer {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 14px;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    font-family: $font-sf-pro;
+    font-size: 13px;
+    line-height: 1.15;
+    color: $white;
+    transition: opacity 0.25s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  /*  Tablet  */
+
+  @media #{$tablet} {
+    ul {
+      flex-flow: row wrap;
+      margin-bottom: -15px;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  /*  Mobile  */
+
+  @media #{$mobile} {
+    ul {
+      margin-bottom: -25px;
+    }
+
+    li {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      margin: 0 0 25px;
+      text-align: left;
+    }
+  }
+}
