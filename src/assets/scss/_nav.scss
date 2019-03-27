@@ -6,66 +6,76 @@
   ul {
     display: flex;
     align-items: center;
+    list-style: none;
   }
 
   li {
-    & ~ li {
-      margin-left: 50px;
-    }
-
-    &.active {
-      .icon {
-        opacity: 1;
-      }
-
-      a {
-        color: $dark-gray;
-        position: relative;
-
-        &:after {
-          content: "";
-          width: 100%;
-          height: 2px;
-          background-color: $green;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          z-index: 0;
-        }
+    // & ~ li {
+    //   margin-left: 10px;
+    // }
+    .special {
+      &:after {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -6px;
+        content: "\f107";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        color: inherit;
+        -webkit-font-smoothing: antialiased;
       }
     }
   }
-
   a {
     display: block;
-    padding: 26px 0 25px;
+    // padding: 26px 0 25px;
     text-decoration: none;
     font-family: inherit;
     font-weight: inherit;
-    font-size: 100%;
+    font-size: 15px;
     line-height: 1.33;
     color: inherit;
     transition: color 0.25s;
-    &::after {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      margin-top: -6px;
-      content: "\f107";
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1;
-      color: inherit;
-      -webkit-font-smoothing: antialiased;
-    }
-    &:hover {
-      color: $dark-gray;
-
-      .icon {
-        opacity: 1;
+    padding: 10px 20px;
+    position: relative;
+    span {
+      &:after {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -7px;
+        content: "\f107";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        color: inherit;
+        -webkit-font-smoothing: antialiased;
       }
+    }
+    &:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+      color: inherit;
+      font-weight: 400;
+    }
+    &:hover:after {
+      width: 100%;
+      left: 0;
+      background-color: black;
     }
   }
 
@@ -90,97 +100,6 @@
       & ~ li {
         margin-left: 15px;
       }
-    }
-  }
-}
-
-/* ------------------------------------------------------------ *\
-	Nav Access
-\* ------------------------------------------------------------ */
-
-.nav--access {
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    font-family: $font-avenir;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.33;
-    color: $dark-gray;
-    text-decoration: none;
-
-    img {
-      width: 24px;
-      height: 24px;
-      border-radius: 5px;
-      margin-right: 9px;
-    }
-  }
-}
-
-/* ------------------------------------------------------------ *\
-	Nav Footer
-\* ------------------------------------------------------------ */
-
-.nav--footer {
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    margin: 0 14px;
-  }
-
-  a {
-    display: block;
-    text-decoration: none;
-    font-family: $font-sf-pro;
-    font-size: 13px;
-    line-height: 1.15;
-    color: $white;
-    transition: opacity 0.25s;
-
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-
-  /*  Tablet  */
-
-  @media #{$tablet} {
-    ul {
-      flex-flow: row wrap;
-      margin-bottom: -15px;
-    }
-
-    li {
-      margin-bottom: 15px;
-    }
-  }
-
-  /*  Mobile  */
-
-  @media #{$mobile} {
-    ul {
-      margin-bottom: -25px;
-    }
-
-    li {
-      flex: 0 0 33.3333%;
-      max-width: 33.3333%;
-      margin: 0 0 25px;
-      text-align: left;
     }
   }
 }

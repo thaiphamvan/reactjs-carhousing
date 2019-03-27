@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/img/dentless-logo-1.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -12,10 +13,32 @@ const Header = () => {
           <nav class="nav nav--primary">
             <ul>
               <li>
-                <a href="#">ABOUT</a>
+                <Link to='/blog'>
+                  <span>ABOUT US</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='/blog'>
+                  <span>SERVICES</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='/blog'>BLOG</Link>
+              </li>
+              <li>
+                <Link to='/blog'>
+                  <span>LOCATIONS</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='/blog'>TRAINING</Link>
               </li>
             </ul>
           </nav>
+          <div>
+            <div className="header__inner_text">CALL NOW</div>
+            <div className="header__inner_text_nb">703-646-7727</div>
+          </div>
         </div>
       </div>
     </header>

@@ -11,7 +11,6 @@ class Home extends Component {
     return (
       <div className="App">
         <Header />
-        <Link to='/blog'>Blog</Link>
       </div>
     );
   }
